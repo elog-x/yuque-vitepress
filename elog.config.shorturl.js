@@ -14,10 +14,7 @@ module.exports = {
     local: {
       outputDir: './docs/docs-shorturl',
       filename: 'urlname',
-      format: 'markdown',
-      frontMatter: {
-        enable: true
-      },
+      format: 'markdown'
     }
   },
   image: {

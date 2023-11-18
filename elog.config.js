@@ -15,10 +15,7 @@ module.exports = {
       outputDir: './docs/docs',
       filename: 'title',
       format: 'markdown',
-      catalog: true,
-      frontMatter: {
-        enable: true
-      },
+      catalog: true
     }
   },
   image: {
