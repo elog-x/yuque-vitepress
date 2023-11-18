@@ -1,0 +1,32 @@
+{
+  "name": "yuque-vitepress",
+  "version": "1.0.0",
+  "description": "语雀 + Elog + VitePress + GitHub Actions + Vercel 文档站点解决方案",
+  "main": "index.js",
+  "scripts": {
+    "elog:sync-local": "elog sync -e .elog.env",
+    "elog:sync": "elog sync",
+    "elog:clean": "elog clean",
+    "elog:sync-local-short": "elog sync -e .elog.env -c elog.config.shorturl.js -a elog.cache.shorturl.json",
+    "elog:sync-short": "elog sync -c elog.config.shorturl.js -a elog.cache.shorturl.json",
+    "elog:clean-short": "elog clean -c elog.config.shorturl.js -a elog.cache.shorturl.json",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elog-x/yuque-vitepress.git"
+  },
+  "keywords": [],
+  "author": "1874",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elog-x/yuque-vitepress/issues"
+  },
+  "homepage": "https://github.com/elog-x/yuque-vitepress#readme",
+  "dependencies": {
+    "@elog/cli": "^0.12.0-beta.3",
+    "vitepress": "^1.0.0-rc.27"
+  }
+}

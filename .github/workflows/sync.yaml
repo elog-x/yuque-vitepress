@@ -1,0 +1,58 @@
+name: Sync Docs
+
+on:
+  # 允许手动push触发
+#  push:
+#    branches:
+#      - master
+  # 允许外部仓库事件触发
+  repository_dispatch:
+    types:
+      - deploy
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检查分支
+        uses: actions/checkout@master
+
+      - name: 安装node环境
+        uses: actions/setup-node@master
+        with:
+          node-version: "18.x"
+
+      - name: 安装依赖
+        run: |
+          export TZ='Asia/Shanghai'
+          npm install --prod
+
+      - name: 拉取文档
+        env:
+          YUQUE_TOKEN: ${{ secrets.YUQUE_TOKEN }}
+          YUQUE_LOGIN: ${{ secrets.YUQUE_LOGIN }}
+          YUQUE_REPO: ${{ secrets.YUQUE_REPO }}
+        run: |
+          npm run elog:sync
+#          npm run elog:sync-short
+
+      - name: 配置Git用户名邮箱
+        run: |
+          git config --global user.name "1874"
+          git config --global user.email "me@mail.1874.cool"
+
+      - name: 提交拉取的文档到GitHub仓库
+        run: |
+          echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.txt
+          git add .
+          git commit -m "Refresh elog.cache.json" -a
+
+      - name: 推送文档到仓库
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 生成静态文件
+        run: |
+          npm run docs:build
