@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { genYuqueSideBar, genYuqueSideBarWithShortUrl } from "../../utils/route";
+import { genYuqueSideBar } from "../../utils/route";
 import { YuQueSVG } from "../../utils/assists";
 
 // https://vitepress.dev/reference/site-config
@@ -15,13 +15,12 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '配置文档', link: '/docs/入门指引/快速开始', activeMatch: '/docs/' },
-      { text: '短路由模式', link: '/docs-shorturl/ssuhngw0yb3dgkkg', activeMatch: '/docs-shorturl/' }
+      // { text: '短路由模式', link: '/docs-shorturl/ssuhngw0yb3dgkkg', activeMatch: '/docs-shorturl/' }
     ],
     sidebar: {
       "/docs/": await genYuqueSideBar('/docs'),
-      "/docs-shorturl/": await genYuqueSideBarWithShortUrl('/docs-shorturl')
+      // "/docs-shorturl/": await genYuqueSideBarWithShortUrl('/docs-shorturl')
     },
-    // sidebar: await genYuqueSideBar(),
     docFooter: {
       prev: '上一篇',
       next: '下一篇'
