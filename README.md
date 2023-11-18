@@ -88,7 +88,7 @@ npm run docs:dev
 ### 检查 Github Actions 权限
 
 在 Github 仓库的设置中找到 `Actions-General`，打开流水线写入权限`Workflow permissions`
-![image](https://image.1874.cool/1874/202311190123718.png)
+![image](https://image.1874.cool/1874/202311190147017.jpg)
 
 ### 配置环境变量
 
