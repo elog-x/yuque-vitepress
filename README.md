@@ -37,7 +37,7 @@ npm install
 
 参考[示例知识库](https://www.yuque.com/1874w/yuque-vitepress-template)
 ，选择或新建语雀文档知识库，并按照[文档提示](https://elog.1874.cool/notion/gvnxobqogetukays#login)
-配置语雀并获取 `token``login``repo`。并在本地`.elog.env`中写入
+配置语雀并获取 `token login repo`。并在本地`.elog.env`中写入
 
 ```text
 YUQUE_TOKEN=获取的Token
