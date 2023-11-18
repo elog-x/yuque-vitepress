@@ -11,6 +11,7 @@ export default defineConfig({
   cleanUrls: true,
   ignoreDeadLinks: true,
   themeConfig: {
+    outline: [2,6],
     nav: [
       { text: '首页', link: '/' },
       { text: '配置文档', link: '/docs/入门指引/快速开始', activeMatch: '/docs/' },
