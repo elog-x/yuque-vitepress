@@ -10,7 +10,13 @@ export default defineConfig({
   lastUpdated: true,
   cleanUrls: true,
   ignoreDeadLinks: true,
+  head: [
+    [
+      'link', { rel: 'icon', href: '/favicon.ico' }
+    ]
+  ],
   themeConfig: {
+
     outline: [2,6],
     nav: [
       { text: '首页', link: '/' },
