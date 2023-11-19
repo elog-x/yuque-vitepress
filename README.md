@@ -19,7 +19,7 @@
 
 ### Fork模板仓库
 
-[点击 Fork](https://github.com/elog-x/yuque-vitepress) 该模板仓库到个人 Github 账号仓库下并 clone 到本地
+[点击 Fork](https://github.com/elog-x/yuque-vitepress/fork) 该模板仓库到个人 Github 账号仓库下并 clone 到本地
 
 ### 安装依赖
 
