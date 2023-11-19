@@ -14,7 +14,8 @@ module.exports = {
     local: {
       outputDir: './docs/docs-shorturl',
       filename: 'urlname',
-      format: 'markdown'
+      format: 'markdown',
+      formatExt: './elog.format.js'
     }
   },
   image: {

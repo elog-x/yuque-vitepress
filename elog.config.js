@@ -15,7 +15,8 @@ module.exports = {
       outputDir: './docs/docs',
       filename: 'title',
       format: 'markdown',
-      catalog: true
+      catalog: true,
+      formatExt: './elog.format.js'
     }
   },
   image: {
