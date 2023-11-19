@@ -122,6 +122,6 @@ Github Actions
 
 ## 参考示例
 
-示例 Github 仓库：[https://github.com/elog-x/yuque-vitepress](https://github.com/elog-x/yuque-vitepress)  
+示例 Github 仓库：[https://github.com/LetTTGACO/yuque-vitepress](https://github.com/LetTTGACO/yuque-vitepress)  
 示例语雀知识库：[https://www.yuque.com/1874w/yuque-vitepress-template](https://www.yuque.com/1874w/yuque-vitepress-template)  
 示例文档站点：[https://yuque-vitepress.vercel.app](https://yuque-vitepress.vercel.app/)  
