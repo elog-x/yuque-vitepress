@@ -16,7 +16,9 @@ export default defineConfig({
     ]
   ],
   themeConfig: {
-
+    search: {
+      provider: 'local'
+    },
     outline: [2,6],
     nav: [
       { text: '首页', link: '/' },
