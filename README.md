@@ -2,9 +2,7 @@
 
 ## 前言
 
-> 注意：2023/11/18更新：由于语雀官方更新了账号密码登录规则，加上了人机校验，账号密码模式已无法通过 Elog 登录！目前只能使用
-> Token 方式同步文档（需要语雀超级会员）  
-> 如果你不是语雀超级会员，可以使用 Notion 进行部署文档站点，[参考示例](https://github.com/LetTTGACO/elog-docs)
+> 当前支持语雀 Token 模式（需要语雀超级会员）和账号密码模式（不需要任何会员）
 
 > VitePress 要求 Node 18及以上版本
 
@@ -38,9 +36,17 @@ npm install
 参考[示例知识库](https://www.yuque.com/1874w/yuque-vitepress-template)
 ，选择或新建语雀文档知识库，并按照[文档提示](https://elog.1874.cool/notion/gvnxobqogetukays#login)
 配置语雀并获取 `token login repo`。并在本地`.elog.env`中写入
+> Token 模式或者账号密码模式二选一即可，默认为账号密码模式，如果需要切换为 Token 模式，则修改`elog.config.js`中的`platform`为`yuque`
 
 ```text
+# 语雀（Token方式）
 YUQUE_TOKEN=获取的Token
+
+#语雀（账号密码模式）
+YUQUE_USERNAME=一般是手机号
+YUQUE_PASSWORD=登录密码
+
+# 语雀公共参数
 YUQUE_LOGIN=获取的login
 YUQUE_REPO=获取的repo
 ```
@@ -84,6 +90,7 @@ npm run docs:dev
 ![image](https://image.1874.cool/1874/202311190122060.png)
 
 ## 自动化同步&部署
+> 注意：在非国内CI/CD环境中使用账号密码模式登录语雀，例如Github Workflow，会导致语雀后台登录设备中出现大量美国IP，目前尚不清楚语雀是否会有安全限制措施，请谨慎使用。推荐本地同步时使用。
 
 ### 检查 Github Actions 权限
 
@@ -113,6 +120,7 @@ https://serverless-api-elog.vercel.app/api/github?user=xxx&repo=xxx&event_type=d
 ```
 
 #### 自动触发-语雀 webhooks
+> 需要语雀超级会员
 
 在语雀知识库 - 更多设置 - 消息推送中可配置语雀 webhooks，填写上面的 Vercel Serverless API。当文档更新时，语雀会调用这个API进行推送，进而触发
 Github Actions
