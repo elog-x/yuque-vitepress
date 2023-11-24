@@ -120,7 +120,7 @@ https://serverless-api-elog.vercel.app/api/github?user=xxx&repo=xxx&event_type=d
 ```
 
 #### 自动触发-语雀 webhooks
-> 需要语雀超级会员
+> 需要语雀专业会员
 
 在语雀知识库 - 更多设置 - 消息推送中可配置语雀 webhooks，填写上面的 Vercel Serverless API。当文档更新时，语雀会调用这个API进行推送，进而触发
 Github Actions
