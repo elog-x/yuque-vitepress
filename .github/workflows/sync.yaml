@@ -31,6 +31,8 @@ jobs:
       - name: 拉取文档
         env:
           YUQUE_TOKEN: ${{ secrets.YUQUE_TOKEN }}
+          YUQUE_USERNAME: ${{ secrets.YUQUE_USERNAME }}
+          YUQUE_PASSWORD: ${{ secrets.YUQUE_PASSWORD }}
           YUQUE_LOGIN: ${{ secrets.YUQUE_LOGIN }}
           YUQUE_REPO: ${{ secrets.YUQUE_REPO }}
         run: |
