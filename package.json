@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/elog-x/yuque-vitepress#readme",
   "dependencies": {
-    "@elog/cli": "^0.13.0",
+    "@elog/cli": "^0.13.1",
     "vitepress": "^1.0.0-rc.27"
   }
 }
